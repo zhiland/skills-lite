@@ -67,11 +67,14 @@ python3 scripts/install.py openspec/skills/lite-feature-plan --dest "$HOME/.agen
 For a project, pass `/path/to/project/.agents/skills` instead.
 Invoke `$lite-feature-plan` with the feature request.
 
-Each folder includes both Claude's `disable-model-invocation: true` and Codex's `agents/openai.yaml` policy with `allow_implicit_invocation: false`.
-These preserve manual invocation in clients that support those fields. They do not grant tool permissions.
-Claude documents that manual-only descriptions are excluded from normal context.
-Actual context use depends on the client and version. Invocation loads the skill body, and that content can remain in the conversation.
-We do not promise zero tokens across clients. Verify discovery and invocation in your installed client before wider rollout.
+Codex can select installed skills automatically when they match the task. Explicit `$skill-name` invocation also works.
+No `agents/openai.yaml` is needed: automatic invocation is Codex's default.
+Claude Code remains manual-only through `disable-model-invocation: true` in each `SKILL.md`.
+
+Codex can use skill names and descriptions for discovery; the full instructions load when a skill is selected.
+Keep installed skills relevant and descriptions concise. Actual context use depends on the client and version.
+Verify discovery and invocation in your installed client before wider rollout.
+If updating an earlier copy, remove its old `agents/openai.yaml` or replace that skill folder deliberately.
 
 References: [Claude skills](https://code.claude.com/docs/en/skills), [Codex skills](https://developers.openai.com/codex/skills).
 No setup command edits your global instructions. To update an existing installation, review the diff and replace that selected folder deliberately.

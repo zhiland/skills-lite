@@ -32,4 +32,4 @@ Earlier handoffs contained model-specific obsolescence judgments and size estima
 Private handoffs, transcript paths, and project history are intentionally excluded from this public package.
 
 Client documentation consulted: [Claude Code skills](https://code.claude.com/docs/en/skills) and [Codex skills](https://developers.openai.com/codex/skills).
-Codex invocation policy was also checked against the installed skill-authoring reference. Client behavior still needs a live smoke test.
+Codex now uses default automatic invocation; the earlier manual-only policy files were removed. Client behavior still needs a live smoke test.

@@ -40,9 +40,6 @@ def validate(root=ROOT):
                 raise ValueError('argument-hint must be a string')
             if meta.get('disable-model-invocation') is not True:
                 raise ValueError('Claude manual invocation flag missing')
-            policy = yaml.safe_load((path.parent / 'agents/openai.yaml').read_text())
-            if policy != {'policy': {'allow_implicit_invocation': False}}:
-                raise ValueError('Codex manual invocation policy missing')
             if not parts[2].strip() or '[TODO:' in parts[2]:
                 raise ValueError('empty or unfinished body')
         except (ValueError, OSError, yaml.YAMLError) as error:
@@ -74,5 +71,5 @@ if __name__ == '__main__':
     if errors:
         sys.exit(1)
     total = sum(p.stat().st_size for p in skills)
-    print(f'Validated {len(skills)} skills, invocation policies, and local links.')
+    print(f'Validated {len(skills)} skills, Claude invocation flags, and local links.')
     print(f'SKILL.md files: {total} UTF-8 bytes (not a token count).')

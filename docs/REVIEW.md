@@ -7,7 +7,7 @@ Source review: 2026-11-13. Current revision: 2026-11-14.
 The first packaged version rewrote too much of the supplied drafts. This revision starts again from those drafts.
 It preserves headings, steps, templates, and wording wherever a concrete correction does not require an edit.
 The three OpenSpec-inspired templates are unchanged from the local originals.
-Names keep the `lite-` prefix for installation, and both clients retain manual invocation settings.
+Names keep the `lite-` prefix for installation, Claude retains manual invocation, and Codex uses automatic selection by default.
 
 ## Targeted changes
 

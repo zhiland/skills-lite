@@ -21,4 +21,5 @@ Report whether the savings came from fewer installed skills, shorter invoked bod
 Publish redacted artifacts and the evaluation method. Do not infer universal superiority from one run.
 
 Before rollout, check that each installed skill appears in the selector, runs when explicitly invoked,
-and stays inactive on an unrelated request. Validate manual-only behavior in each supported client version.
+and stays inactive on an unrelated request. In Codex, also test automatic selection on relevant requests.
+In Claude Code, validate manual-only behavior.
