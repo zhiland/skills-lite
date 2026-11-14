@@ -1,8 +1,12 @@
-## Rules for working with code
+# Optional project rules
 
-- Write tests one at a time: test → minimal code → next test. A test checks behaviour through the public interface. Take the expected value from an independent source; do not compute it the way the code does.
-- Hard bug: do not form hypotheses until there is one command that you have already run, that fails on the exact reported symptom, gives a stable result, and runs in seconds. If there is no such command, say what you tried and ask for access or an artifact.
-- Tag debug logs with a unique prefix and remove them before you finish.
-- A prototype is throwaway code for one question: no tests, no error handling, no abstractions, and a name that says "prototype". Only the decision goes to the main branch.
-- When a term conflicts with the code or is used in two senses, name it at once and propose one term.
-- Propose an ADR only if the decision is hard to reverse, would surprise a reader without context, and was chosen from real alternatives.
+Adopt only rules that match the project. Do not paste this entire file into global instructions by default.
+
+- When TDD is requested or required, use one failing behavior test at a time, then minimal code and refactoring. Use independent expected results.
+- For a hard bug, seek a representative reproduction. Form explicit hypotheses to guide evidence collection when reproduction is unavailable or intermittent.
+  Record uncertainty and distinguish a diagnostic observation from a verified fix.
+- Remove temporary instrumentation introduced by the task, unless the project needs it retained. Preserve existing observability.
+- A prototype answers one bounded question. Keep safeguards needed for real data and external effects. Add tests only where they support that question.
+  Move prototype code into production only through an explicit implementation decision and normal checks.
+- Resolve ambiguous domain terms when they affect behavior or interfaces.
+- Record consequential design choices with rationale and alternatives. Use an ADR when the project needs a durable decision record.

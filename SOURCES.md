@@ -1,21 +1,32 @@
-# Original draft mapping
+# Sources and provenance
 
-The following files retain their original bytes. Paths on the left are relative to the two supplied local draft folders.
+Reviewed on 2026-11-13. Local drafts were the input to this review. Upstream files were consulted to check attribution and omitted behavior.
+This was not a new exhaustive audit of every upstream skill.
 
-| Original | Repository path |
+| Source | Pinned revision | Material used |
+| --- | --- | --- |
+| [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec/tree/d12c2817776779e06891d68230773b3bb673b106) | `d12c2817776779e06891d68230773b3bb673b106` | `schemas/spec-driven/schema.yaml`, its templates, and the planning guidance in `src/core/templates/workflows/explore.ts` |
+| [mattpocock/skills](https://github.com/mattpocock/skills/tree/5863806dd4e15c63174bee4e7515a4256792ecfa) | `5863806dd4e15c63174bee4e7515a4256792ecfa` | `skills/productivity/grilling`, `to-questionnaire`, and `skills/engineering/to-spec`, `to-tickets`, `implement-spec`, `retro` |
+
+The Matt Pocock revision matches the supplied handoff. The OpenSpec handoff did not pin one source commit.
+The OpenSpec revision above identifies this review's snapshot, not a reconstructed revision of the earlier review.
+
+## Adaptation map
+
+| Local deliverable | Origin and changes |
 | --- | --- |
-| `claude-skills-lite/skills/grill/SKILL.md` | `matt-pocock-skills/skills/lite-grill/SKILL.md` |
-| `claude-skills-lite/skills/feature-spec/SKILL.md` | `matt-pocock-skills/skills/lite-feature-spec/SKILL.md` |
-| `claude-skills-lite/skills/to-tickets/SKILL.md` | `matt-pocock-skills/skills/lite-to-tickets/SKILL.md` |
-| `claude-skills-lite/skills/run-tickets/SKILL.md` | `matt-pocock-skills/skills/lite-run-tickets/SKILL.md` |
-| `claude-skills-lite/skills/retro/SKILL.md` | `matt-pocock-skills/skills/lite-retro/SKILL.md` |
-| `claude-skills-lite/skills/ask-person/SKILL.md` | `matt-pocock-skills/skills/lite-ask-person/SKILL.md` |
-| `claude-skills-lite/CLAUDE-snippet.md` | `matt-pocock-skills/OPTIONAL-RULES.md` |
-| `feature-process/RULES.md` | `openspec/skills/lite-feature-plan/SKILL.md` |
-| `feature-process/adaptation-review/SKILL.md` | `openspec/skills/lite-adaptation-review/SKILL.md` |
-| `feature-process/changes/_template/proposal.md` | `openspec/skills/lite-feature-plan/templates/proposal.md` |
-| `feature-process/changes/_template/spec.md` | `openspec/skills/lite-feature-plan/templates/spec.md` |
-| `feature-process/changes/_template/tasks.md` | `openspec/skills/lite-feature-plan/templates/tasks.md` |
+| `lite-feature-plan` and templates | OpenSpec-inspired local rules/templates, repackaged as an optional skill. No CLI or delta-format compatibility. |
+| `lite-adaptation-review` | Original companion from the local OpenSpec review. Scope and uncertainty handling revised here. |
+| `lite-grill` | `grilling`, with domain-term clarification from the local draft. Bounded completion and neutral questions. |
+| `lite-feature-spec` | `to-spec`. No tracker setup, exhaustive story list, or compulsory new test-seam approval. |
+| `lite-to-tickets` | `to-tickets`. Added accessible spec references, verification, coverage, and graph checks. |
+| `lite-run-tickets` | `implement-spec` and spec-review ideas from the local `code-review` adaptation. Added integration acceptance and safe cleanup. |
+| `lite-retro` | `retro`. Evidence scope and confidence made explicit. |
+| `lite-ask-person` | `to-questionnaire`. Reuses supplied context and avoids invented deadlines. |
+| Optional rules | Local distillation of `tdd`, `diagnosing-bugs`, `prototype`, and `domain-modeling`. Unsafe universal constraints removed. |
 
-Sources: https://github.com/Fission-AI/OpenSpec and https://github.com/mattpocock/skills.
-MIT notices: `licenses/openspec-MIT.txt` and `licenses/matt-pocock-MIT.txt`.
+Earlier handoffs contained model-specific obsolescence judgments and size estimates. They were not benchmarks and are not adopted as findings here.
+Private handoffs, transcript paths, and project history are intentionally excluded from this public package.
+
+Client documentation consulted: [Claude Code skills](https://code.claude.com/docs/en/skills) and [Codex skills](https://developers.openai.com/codex/skills).
+Codex invocation policy was also checked against the installed skill-authoring reference. Client behavior still needs a live smoke test.

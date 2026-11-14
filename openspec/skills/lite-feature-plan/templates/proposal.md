@@ -1,5 +1,8 @@
 # <Feature name>
 
+Status: draft | approved
+Approval: <decision reference and scope, when approved>
+
 ## Why
 
 <!-- 1–3 sentences: what problem this solves and why now. -->
@@ -24,7 +27,7 @@
 
 ## Decisions
 
-<!-- Only for a cross-cutting change, a new dependency or a migration. Otherwise delete this section.
+<!-- Include material technical choices, risks, and alternatives. Link design.md if these need a separate explanation. Otherwise delete this section.
      Format: decision — why — alternatives rejected. -->
 
 ## Open questions

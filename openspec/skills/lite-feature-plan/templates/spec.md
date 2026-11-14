@@ -1,5 +1,8 @@
 # Behavior: <feature name>
 
+Status: draft | approved
+Revision: <commit or explicit revision>
+
 <!-- Observable behavior only: inputs, outputs, errors, constraints.
      No class names, libraries or implementation steps.
      Every scenario is a candidate test. -->

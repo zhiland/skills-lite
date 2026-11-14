@@ -8,10 +8,12 @@
 
 - [ ] 1.1 <What to do>
   - Where: <files or module>
+  - Blocked by: <task IDs or none>
   - Requirement: R1
   - Check: <test, command or observable behavior>
 - [ ] 1.2 <What to do>
   - Where:
+  - Blocked by: <task IDs or none>
   - Requirement:
   - Check:
 
@@ -21,10 +23,16 @@
 
 - [ ] 2.1 <What to do>
   - Where:
+  - Blocked by: <task IDs or none>
   - Requirement:
   - Check:
 
 ## 3. Cross-cutting check
 
+<!-- After all implementation groups. Record evidence and unavailable checks. -->
+
 - [ ] 3.1 <A check that spans several groups>
+  - Where: <integration boundary>
+  - Requirement: <covered IDs>
+  - Blocked by: <all implementation task IDs>
   - Check:

@@ -1,10 +1,106 @@
-# Frontier Skills Lite — original local drafts
+# Frontier Skills Lite
 
-This first commit preserves the exact local skill and template texts supplied for review.
-These drafts were already adaptations inspired by OpenSpec and Matt Pocock's skills, not unmodified upstream repositories.
+Compact, opt-in workflows for capable coding agents. Keep the decisions, acceptance criteria, and handoff contracts. Load them when needed.
 
-Files are mapped to their eventual package paths so Git can compare all three revisions directly.
-The text is unchanged: names in original frontmatter may differ from directory names, and the planning entry point still contains the original RULES.md.
-This historical snapshot is not the installable distribution. Use the latest main branch for installation.
+This project adapts ideas from [OpenSpec](https://github.com/Fission-AI/OpenSpec) and [Matt Pocock's skills](https://github.com/mattpocock/skills).
+It is an independent adaptation, not an official distribution or a drop-in replacement for either project.
 
-See SOURCES.md for the mapping and retained MIT notices in licenses/.
+## Why this exists
+
+Strong models still need the team's decisions and workflow constraints. They do not need a general engineering tutorial in every task.
+This collection keeps focused interviews, behavior specs, ticket dependencies, verification evidence, and retrospective feedback.
+It removes mandatory setup, tracker assumptions, repeated tutorials, and broad instructions that belong only to specific tasks.
+
+The design targets current frontier coding models. This is a design premise, not proof that a model makes the original skills obsolete.
+There is no measured claim of better quality, lower cost, or a particular token saving. See [review and limitations](docs/REVIEW.md).
+
+## Two independent collections
+
+| Collection | Skill | Use it for |
+| --- | --- | --- |
+| `openspec` | `lite-feature-plan` | Proposal, behavior spec, and verifiable tasks for a substantial feature |
+| `openspec` | `lite-adaptation-review` | Evidence-based adoption review within an agreed project scope |
+| `matt-pocock-skills` | `lite-grill` | Decisions that block a feature or plan |
+| `matt-pocock-skills` | `lite-feature-spec` | A compact spec from settled decisions |
+| `matt-pocock-skills` | `lite-to-tickets` | Verifiable slices and dependency edges |
+| `matt-pocock-skills` | `lite-run-tickets` | Implementation, controlled integration, and final verification |
+| `matt-pocock-skills` | `lite-retro` | Evidence-backed environment improvements |
+| `matt-pocock-skills` | `lite-ask-person` | A questionnaire, saved locally |
+
+Each skill is self-contained. No skill requires another installed skill, MCP server, API key, or external CLI.
+The planning skill includes its own templates. Parallel execution requires a harness with isolated worktrees and authorized delegation.
+The runner also supports sequential execution.
+
+`lite-adaptation-review` is a locally originated companion. It is grouped with the OpenSpec review materials, not attributed to OpenSpec's authors.
+[Optional project rules](matt-pocock-skills/OPTIONAL-RULES.md) are available separately. They are not installed automatically.
+
+## Choose one planning path
+
+- **Artifact-based:** `lite-feature-plan` produces proposal, spec, and tasks. Add tickets only when separate handoffs are useful.
+- **Conversation-based:** `lite-grill` → `lite-feature-spec` → `lite-to-tickets` → `lite-run-tickets`.
+
+These are suggested sequences, not automatic chains. Invoke each skill when needed. Reuse existing artifacts instead of creating competing specs.
+The OpenSpec-inspired templates are plain Markdown. They omit live-spec delta merging, archive commands, and OpenSpec validation.
+Use upstream OpenSpec when those capabilities are part of your team's process.
+
+## Install selected skills
+
+Clone this repository, then run these commands **from its root**. Copy only the skills you intend to use.
+The examples install one skill. Repeat with another source folder as needed. A pre-existing destination causes the copy to stop.
+
+### Claude Code
+
+```sh
+python3 scripts/install.py openspec/skills/lite-feature-plan --dest "$HOME/.claude/skills"
+```
+
+For a project, pass `/path/to/project/.claude/skills` instead.
+Invoke `/lite-feature-plan Describe the feature here`.
+
+### Codex
+
+```sh
+python3 scripts/install.py openspec/skills/lite-feature-plan --dest "$HOME/.agents/skills"
+```
+
+For a project, pass `/path/to/project/.agents/skills` instead.
+Invoke `$lite-feature-plan` with the feature request.
+
+Each folder includes both Claude's `disable-model-invocation: true` and Codex's `agents/openai.yaml` policy with `allow_implicit_invocation: false`.
+These preserve manual invocation in clients that support those fields. They do not grant tool permissions.
+Claude documents that manual-only descriptions are excluded from normal context.
+Actual context use depends on the client and version. Invocation loads the skill body, and that content can remain in the conversation.
+We do not promise zero tokens across clients. Verify discovery and invocation in your installed client before wider rollout.
+
+References: [Claude skills](https://code.claude.com/docs/en/skills), [Codex skills](https://developers.openai.com/codex/skills).
+No setup command edits your global instructions. To update an existing installation, review the diff and replace that selected folder deliberately.
+
+## Review and validation
+
+Requires Python 3.10+ and PyYAML for validation. The installer uses only the Python standard library.
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-dev.txt
+.venv/bin/python scripts/validate.py
+.venv/bin/python -m unittest discover -s tests
+```
+
+Validation checks metadata, invocation policy, local links, and packaging. Tests check installation boundaries and collision behavior.
+These checks do not prove agent behavior. The initial review includes a scenario walkthrough, not a live multi-agent implementation benchmark.
+
+Read [REVIEW.md](docs/REVIEW.md) for corrections, [EVALUATION.md](docs/EVALUATION.md) for the runtime trial protocol,
+and [SOURCES.md](SOURCES.md) for pinned upstream provenance.
+
+## Publish or contribute
+
+This is a standalone Git repository. No account, remote URL, or private project data is required.
+[Publication steps](docs/PUBLISHING.md) explain how to create a new GitHub project from the local checkout.
+Changes should address a demonstrated failure or a concrete workflow need. Keep each skill independently installable.
+Run validation, describe the behavioral change, and state whether it was tested in a real client.
+Do not add model superiority claims without reproducible evidence.
+
+## License
+
+MIT. See [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Upstream notices are retained, including inside installable skill folders. The respective authors do not endorse this adaptation.
