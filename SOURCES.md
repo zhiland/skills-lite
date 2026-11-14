@@ -52,6 +52,6 @@ Codex now uses default automatic invocation; the earlier manual-only policy file
 - [Anthropic: The new rules of context engineering for Claude 5 generation models](https://claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models/) describes reducing constraints and retaining task-specific context.
 - [OpenAI: Rethinking skills and prompts for GPT-6 Astra](https://learn.chatgpt.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra) recommends auditing skills as model behavior changes. Its Astra observations are not automatically evidence about Sol, Terra, or Luna.
 
-The initial local review used Claude Fable 5.2, as reported by the author. Subsequent review and editing took place in Codex.
-A separate Astra review run and its model version are not established by the retained history. Consulting the Astra guidance is not an Astra benchmark.
+The initial local review used Claude Fable 5.2; subsequent review and editing used GPT-6 Astra in Codex, as confirmed by the author.
+This was a text review, not a cross-model benchmark.
 November 2026 describes the target model generation, not a guarantee that every instruction is redundant for every current model.
