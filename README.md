@@ -11,8 +11,7 @@ Instructions accumulate as we work around older models' limitations. Newer model
 
 This project applies that idea to two skill collections:
 
-- **Approach:** shorten general guidance, preserve useful workflow choices, and keep the original wording where it works.
-- **Review and editing:** Claude Fable 5.2 and GPT-6 Astra.
+- **Approach:** reviewed and edited with Claude Fable 5.2 and GPT-6 Astra to shorten general guidance, preserve useful workflow choices, and keep the original wording where it works.
 - **Intended audience:** users of current frontier models, rather than models that need extensive procedural guidance.
 - **Evidence:** reviewed adaptations, not benchmark-proven replacements for the upstream collections.
 
