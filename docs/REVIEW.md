@@ -45,9 +45,9 @@ Sources informing this approach:
 
 ## Verification boundary
 
-The local drafts remain untouched. All eight skill packages are checked for metadata, client invocation policy, and local links.
-Installation tests check preservation of existing content, refusal of source symlinks, and source boundaries.
-The installed Codex quick validator rejects Claude's supported invocation fields, so this repository validates the combined metadata explicitly with a YAML parser.
+The local drafts remain untouched. Earlier revisions passed metadata/link checks and five installation tests.
+The installer, Python validator, development dependency, tests, and CI workflow were subsequently removed to keep this a Markdown-only collection.
+Those earlier test results describe the historical tooling, not a current automated validation service.
 
 Manual contract review covers unresolved decisions, invalid ticket dependencies, concurrent results, unavailable checks, dirty worker checkouts,
 and adoption reviews without usage evidence. This is text inspection, not independent behavioral testing.

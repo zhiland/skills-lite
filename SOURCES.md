@@ -14,6 +14,18 @@ The OpenSpec revision above identifies this review's snapshot, not a reconstruct
 The current skill text is edited directly from the supplied local drafts. Original templates are preserved unchanged.
 The earlier broad rewrite remains in Git history. It is not the textual base of the current revision.
 
+## Release versions
+
+Verified against GitHub releases and source manifests on 2026-11-14:
+
+| Project | Latest release | Relationship to our pinned source |
+| --- | --- | --- |
+| Matt Pocock Skills | [v1.3.2](https://github.com/mattpocock/skills/releases/tag/v1.3.2), published 2026-10-29 | `5863806` is five commits after the tag; `.claude-plugin/plugin.json` still declares 1.3.2. Those changes include `implement-spec`. |
+| OpenSpec | [v2.0.0](https://github.com/Fission-AI/OpenSpec/releases/tag/v2.0.0), published 2026-11-11 | `d12c281` is the release commit; `package.json` declares 2.0.0. |
+
+These are source versions, not a version or compatibility guarantee for this independent collection.
+The original OpenSpec handoff also consulted CLI 1.16.1; its unpinned earlier materials are not retroactively relabeled as 2.0.0.
+
 ## Adaptation map
 
 | Local deliverable | Origin and changes |
