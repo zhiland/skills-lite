@@ -25,6 +25,21 @@ This project applies that idea to two skill collections:
 Latest upstream releases checked on 14 November 2026. Exact source details are in [SOURCES.md](SOURCES.md).
 OpenSpec-inspired templates are plain Markdown, not CLI schemas.
 
+## What we kept and left out
+
+| Source material | Decision and reason |
+| --- | --- |
+| Matt Pocock: `grilling`, `to-tickets`, `implement-spec`, `retro`, `to-questionnaire` | Keep their workflow core: decisions, handoffs, verification, and output formats. |
+| Matt Pocock: `to-spec` | Keep a compact spec template; omit the exhaustive story list and tracker setup. |
+| Matt Pocock: `tdd`, `code-review`, `diagnosing-bugs`, architecture guidance | Omit standalone tutorials on familiar engineering methods. Retain selected rules and verification within the workflows. |
+| OpenSpec: `explore`, `new`, `continue`, `ff`, `propose`, `apply`, `update`, `verify`, `onboard` | Replace separate commands, CLI instructions, and onboarding with one planning skill and three templates. |
+| OpenSpec: `sync`, `archive`, `bulk-archive` | Omit living-spec synchronization and delta merging; this collection uses change-specific plans. |
+
+**Preserved from OpenSpec:** proposal/spec/tasks, human approval before code, WHEN/THEN scenarios, and a check for every task, with relevant tests and docs alongside the code.
+
+These are scope choices informed by text review, not proof that the omitted skills are obsolete.
+Use upstream OpenSpec when you need living specs, delta validation, or its shared CLI workflow.
+
 ## Skills
 
 | Folder | Skill | Purpose |
