@@ -1,28 +1,23 @@
 ---
 name: lite-feature-spec
-description: "Turn settled decisions into a compact feature spec with acceptance scenarios."
+description: Write a feature spec from what this conversation has already settled, with no new interview.
 disable-model-invocation: true
+argument-hint: "Where to save it (path or ticket)"
 ---
 
-# Feature spec
+Write a feature spec from what is already decided in this conversation. Do not run a new interview. The spec is single-use: no ongoing maintenance after merge.
 
-Synthesize the conversation and supplied artifacts. Read the relevant code if needed. Do not restart the interview.
+1. Explore the code if you have not already.
+2. Record the agreed test seams; prefer existing ones. Mark unresolved behavior as draft and ask only blocking questions.
+3. Write the spec with the template below to the place I named. If I named none, ask once.
 
-Write to the requested location or the existing project convention. Otherwise use `changes/<feature>/spec.md` and report the path.
-Preserve existing content. If the target is an OpenSpec-inspired behavior spec, keep technical decisions in its proposal or design document.
+Template:
 
-Include:
-- Problem and intended outcome.
-- Requirements with stable IDs and observable WHEN/THEN scenarios.
-- Relevant failure and boundary cases supported by the agreed scope.
-- Confirmed implementation constraints, separate from observable requirements.
-- Verification approach and relevant existing tests or file paths as navigation aids.
-- Out of scope, assumptions, unresolved decisions, and approval status.
+    ## Problem                   (from the user's point of view)
+    ## Solution                  (from the user's point of view)
+    ## Scenarios                 (requirement IDs and WHEN/THEN cases from the decisions)
+    ## Implementation decisions  (modules, interfaces, schemas, contracts)
+    ## Testing decisions         (seams, similar tests already in the code)
+    ## Out of scope
 
-Prefer existing test boundaries. Select test levels for useful coverage and feedback speed, not a fixed minimum number of boundaries.
-A proposed test approach is a proposal until approved when approval is required by the project.
-If a missing decision changes behavior or scope, mark the spec as draft and ask only the blocking question.
-Do not invent an answer or mark the spec ready for implementation.
-
-The spec records this change. Preserve it after merge according to project policy. It need not become a continuously maintained system specification.
-Local drafting does not authorize tracker publication.
+Use file paths as navigation aids, not requirements. Include code only when it states a decision more precisely than prose.

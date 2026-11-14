@@ -34,9 +34,11 @@ def validate(root=ROOT):
             description = meta.get('description')
             if not isinstance(description, str) or not description.strip() or len(description) > 1024:
                 raise ValueError('invalid description')
-            if set(meta) != {'name', 'description', 'disable-model-invocation'}:
+            if set(meta) - {'name', 'description', 'disable-model-invocation', 'argument-hint'}:
                 raise ValueError('unexpected frontmatter keys')
-            if meta['disable-model-invocation'] is not True:
+            if 'argument-hint' in meta and not isinstance(meta['argument-hint'], str):
+                raise ValueError('argument-hint must be a string')
+            if meta.get('disable-model-invocation') is not True:
                 raise ValueError('Claude manual invocation flag missing')
             policy = yaml.safe_load((path.parent / 'agents/openai.yaml').read_text())
             if policy != {'policy': {'allow_implicit_invocation': False}}:

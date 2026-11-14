@@ -1,21 +1,18 @@
-# Publish as a new GitHub project
+# Publication notes
 
-The local repository is prepared on `main`. Review its README, license, and initial commit before publication.
-No remote is configured and no GitHub repository was created by the packaging task.
+Project: [zhiland/frontier-skills-lite](https://github.com/zhiland/frontier-skills-lite).
+The default branch is `main`. The three initial stages have tags described in [HISTORY.md](HISTORY.md).
 
-From this repository root, after authenticating GitHub CLI:
+The repository includes a README, MIT license and upstream notices, source mapping, an installation helper, validation, and GitHub Actions.
+CI checks packaging and installation boundaries. It does not establish model behavior or performance.
+
+## Publish your own copy
+
+Review the license and notices. Authenticate GitHub CLI, then run from a checkout without an existing `origin`:
 
 ```sh
-gh repo create frontier-skills-lite --public --source=. --remote=origin --push
+gh repo create YOUR-ACCOUNT/YOUR-REPO --public --source=. --remote=origin --push
+git push origin --tags
 ```
 
-This command creates a public project under the authenticated account and pushes the current branch.
-For an organization, specify `ORG/frontier-skills-lite`. Choose visibility deliberately before running it.
-
-Suggested description:
-
-> Compact, opt-in coding-agent workflows adapted from OpenSpec and Matt Pocock's skills, with explicit verification and minimal context overhead.
-
-Suggested topics: `agent-skills`, `claude-code`, `codex`, `spec-driven-development`, `developer-tools`.
-
-The CI workflow validates packaging and runs installation tests. GitHub execution is not verified until the first push completes.
+Choose the account, name, and visibility deliberately. This creates a new repository rather than updating this project's upstream.

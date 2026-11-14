@@ -9,7 +9,8 @@ It is an independent adaptation, not an official distribution or a drop-in repla
 
 Strong models still need the team's decisions and workflow constraints. They do not need a general engineering tutorial in every task.
 This collection keeps focused interviews, behavior specs, ticket dependencies, verification evidence, and retrospective feedback.
-It removes mandatory setup, tracker assumptions, repeated tutorials, and broad instructions that belong only to specific tasks.
+It shortens the supplied local adaptations while preserving their wording and structure.
+Changes target concrete problems, including unnecessary approval stops and unsafe cleanup.
 
 The design targets current frontier coding models. This is a design premise, not proof that a model makes the original skills obsolete.
 There is no measured claim of better quality, lower cost, or a particular token saving. See [review and limitations](docs/REVIEW.md).
@@ -87,15 +88,21 @@ python3 -m venv .venv
 ```
 
 Validation checks metadata, invocation policy, local links, and packaging. Tests check installation boundaries and collision behavior.
-These checks do not prove agent behavior. The initial review includes a scenario walkthrough, not a live multi-agent implementation benchmark.
+These checks do not prove agent behavior. The review includes a manual scenario walkthrough, not a live multi-agent implementation benchmark.
+The current revision returns to the local source drafts after an earlier rewrite changed too much of their wording.
 
 Read [REVIEW.md](docs/REVIEW.md) for corrections, [EVALUATION.md](docs/EVALUATION.md) for the runtime trial protocol,
 and [SOURCES.md](SOURCES.md) for pinned upstream provenance.
 
+## Revision history
+
+The first three commits preserve the original local drafts, the first rewrite, and the final conservative revision.
+[Browse the history and compare versions](docs/HISTORY.md).
+
 ## Publish or contribute
 
 This is a standalone Git repository. No account, remote URL, or private project data is required.
-[Publication steps](docs/PUBLISHING.md) explain how to create a new GitHub project from the local checkout.
+[Publication notes](docs/PUBLISHING.md) explain the repository setup and how to publish a separate fork.
 Changes should address a demonstrated failure or a concrete workflow need. Keep each skill independently installable.
 Run validation, describe the behavioral change, and state whether it was tested in a real client.
 Do not add model superiority claims without reproducible evidence.

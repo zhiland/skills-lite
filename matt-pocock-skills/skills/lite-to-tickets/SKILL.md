@@ -1,35 +1,32 @@
 ---
 name: lite-to-tickets
-description: "Split an approved spec into independently verifiable tickets with explicit dependencies."
+description: Break a spec or plan into tickets - vertical slices with "blocked by" edges.
 disable-model-invocation: true
+argument-hint: "The spec (path or ticket) and where to publish"
 ---
 
-# To tickets
+Break the spec, plan, or this conversation into tickets.
 
-Read the spec and relevant code. If decisions remain open, identify the blockers before marking tickets ready.
-Prefer vertical slices that deliver a narrow behavior through the layers it actually needs.
-Use preparatory refactoring only when it enables the feature. For wide migrations, use expand, migrate, and contract stages.
+Slicing rules:
 
-1. Draft one ticket per bounded outcome. Include its requirement IDs, dependency IDs, and verification method.
-2. Check that IDs are unique, blockers exist, and the graph has no cycles. Check that all in-scope requirements are covered.
-3. Present the breakdown for approval. Reuse approval already given for an unchanged breakdown.
-4. Write approved tickets to the requested location. Default to `changes/<feature>/tickets/NN-title.md`.
-   External publication requires a request that identifies the tracker and scope. Approval of content alone is not publication permission.
+- A ticket is a vertical slice: a narrow but complete behaviour, verifiable on its own.
+- Size: one agent completes a ticket in one fresh context.
+- Every ticket lists what blocks it. Check for missing blockers and cycles.
+- For a wide mechanical change: add the new form beside the old → migrate callers in batches → delete the old form.
+- A ticket is understandable without this conversation: it links to an accessible spec and states its own outcome and checks.
 
-Each ticket contains:
+Process:
 
-    # T01: <title>
-    Spec: <relative link or stable URL, and revision>
-    Requirements: <IDs>
-    Outcome: <observable behavior>
-    Area: <modules or current file paths for navigation>
-    Blocked by: <ticket IDs or none>
-    Acceptance criteria: <observable checks>
-    Verification: <commands or manual procedure, and expected results>
-    Status: pending | running | blocked | verified
-    Evidence: <filled after execution>
+1. Draft the breakdown locally: title, blocked by, what it delivers. Cover every in-scope requirement.
+2. Ask about size and dependencies unless I already approved this breakdown.
+3. Use the place I named; otherwise `.scratch/<feature>/tickets/NN-<title>.md`, blockers first. Publish externally only when requested.
 
-Tickets must make sense without this conversation. Include task-specific constraints and link shared decisions rather than copying the whole spec.
-Ensure a worker can access the linked spec. Local artifacts must reach its worktree before dispatch.
-Document overlapping files or shared interfaces that require sequencing.
-A closed tracker issue does not prove a dependency was integrated and verified.
+Ticket template:
+
+    # <NN>: <title>
+    Spec: <link and requirement IDs>
+    What to build: the end-to-end behaviour from the user's point of view.
+    Blocked by: <numbers> or "nothing".
+    Acceptance criteria:
+    - [ ] ...
+    Check: <command or observable result>

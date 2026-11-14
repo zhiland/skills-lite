@@ -1,20 +1,17 @@
 ---
 name: lite-grill
-description: "Resolve decisions that block a feature or plan through a focused interview."
+description: Interview before a feature or decision - rounds of questions until blocking decisions are settled.
 disable-model-invocation: true
+argument-hint: "What are we discussing?"
 ---
 
-# Grill
+Interview me until we share the same understanding of the task. Do not implement anything or write a spec unless I ask.
 
-Read the relevant code and supplied artifacts before asking factual questions. Use the user's selected project scope.
-Interview about unresolved decisions, not facts you can verify.
+- Explore the code first. Find facts yourself (what is in the code, configs, tracker). Ask me only about decisions.
+- Ask in rounds. Keep each round small and its questions independent. Leave dependent questions for the next round.
+- Number the questions. Give a recommended answer where the evidence supports one.
+- If a term I use conflicts with the code, or I use it in two senses, say so at once and propose one term.
+- If what I say contradicts the code, show the contradiction and ask which is right.
+- Test boundaries with concrete edge-case scenarios.
 
-- Ask a small round of independent questions. Ask dependent questions after their prerequisites are settled.
-- Give a recommendation when evidence supports one. State alternatives and tradeoffs without steering every answer toward yes.
-- Resolve contradictions between the requested behavior and the current system. Distinguish current behavior from desired behavior.
-- Use concrete boundary cases to test ambiguous requirements and overloaded terms.
-- Keep confirmed decisions, proposed defaults, and unresolved questions separate. Silence is not acceptance.
-
-Finish when scope, success criteria, and decisions needed for the next step are clear and the user confirms the summary.
-List deferred questions with their impact. Do not expand the interview to unrelated branches.
-This invocation produces a decision summary. Write a spec or implementation only if the user requests that next action.
+The interview is done when decisions needed for the next step are settled. Finish with a list of the decisions made and deferred questions.

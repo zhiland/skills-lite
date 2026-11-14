@@ -1,23 +1,27 @@
 ---
 name: lite-ask-person
-description: "Draft a questionnaire for someone whose knowledge is needed for a decision."
+description: Write a questionnaire for a person who holds knowledge a decision needs.
 disable-model-invocation: true
+argument-hint: "Who it is for and about what"
 ---
 
-# Ask person
+Write a questionnaire for one person who knows what I do not.
 
-Use known context first. Ask only for missing essentials: the recipient's role and relevant expertise, and the decisions or facts needed back.
+Ask only for missing information:
 
-Draft `ask-<topic>.md` in the requested location or current project. Preserve an existing file unless asked to update it.
-Include:
-- Purpose and the decision that depends on the answers.
-- Sender, recipient, and intended use, only where known.
-- Brief context for a reader outside the conversation.
-- Answer instructions. Partial answers and uncertainty are acceptable.
-- Questions ordered by importance, with space for each answer.
-- A final invitation to identify missing questions.
+1. Who it goes to: their role, what they know, how they relate to me.
+2. What I need back: which decisions or facts.
 
-Use one idea per question. Add a reason only where it prevents ambiguity.
-Do not invent a deadline, recipient identity, or effort commitment. Omit unknown optional details or label them as suggestions.
-Check that every requested fact or decision has a corresponding question. Report the file path.
-Drafting does not authorize sending or sharing the questionnaire.
+Then write the questionnaire to `ask-<topic>.md` and report the path.
+
+Structure:
+
+    # <title>
+    Purpose: why this exists and which decision depends on it.
+    From, to, and how the answers will be used.
+    ## Context           (one paragraph for someone outside the topic)
+    ## How to answer     (known deadline; "I don't know" is a valid answer)
+    ## <theme>           (questions from most to least important)
+    ## What did we not ask?
+
+One question, one idea. Leave space for the answer under each. Do not send the questionnaire.

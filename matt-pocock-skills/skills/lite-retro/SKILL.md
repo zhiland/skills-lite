@@ -1,20 +1,17 @@
 ---
 name: lite-retro
-description: "Review a session and propose evidence-backed improvements to the agent environment."
+description: Session review - what to change in the agent's environment so the next session goes better.
 disable-model-invocation: true
+argument-hint: "Which session (default: this one)"
 ---
 
-# Retro
+Review the session and propose improvements to the agent's environment, not to the code. Change nothing; only propose. List the proposals most severe first, each with the place in the session where the problem showed.
 
-Review the specified session, or this conversation by default. Propose changes without applying them.
-Use only relevant records within the authorized scope. State missing evidence instead of searching unrelated private history.
+What to look for:
 
-Look for:
-- Repeated navigation failures that a precise pointer could prevent.
-- Mechanical errors that an existing or new automated check could catch. Inspect current checks before proposing another.
-- Judgment failures that need review guidance.
-- Conflicting or redundant instructions. Treat a suspected no-op as a hypothesis unless behavior supports it.
-- Unnecessary tool calls or unavailable information that affected the outcome.
-
-Order findings by impact. For each, give the observed event, proposed location and change, expected benefit, and a way to check it.
-Prefer a narrow correction over a global rule based on one incident. Report no findings when the evidence supports none.
+- **Navigation.** A file or fact took long to find → a pointer in the rules next to the module.
+- **Automated checks.** A check would have caught the mistake → first see which checks the repo already has and whether they are wired in. A mechanical mistake → a lint rule or a CI step, not a new instruction.
+- **Coding standards.** Something only judgement can check → a rule for review.
+- **Instructions.** A line shown to add no value → propose deleting it. A rule in the shared instructions that matters only at review → move it there.
+- **Tools.** Expensive calls that could be simpler.
+- **Access to data.** Logs, an environment, or read access were missing → name exactly what.

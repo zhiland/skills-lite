@@ -1,6 +1,6 @@
 # Sources and provenance
 
-Reviewed on 2026-11-13. Local drafts were the input to this review. Upstream files were consulted to check attribution and omitted behavior.
+Source review: 2026-11-13. Conservative revision: 2026-11-14. Local drafts were the input to this review. Upstream files were consulted to check attribution and omitted behavior.
 This was not a new exhaustive audit of every upstream skill.
 
 | Source | Pinned revision | Material used |
@@ -11,6 +11,9 @@ This was not a new exhaustive audit of every upstream skill.
 The Matt Pocock revision matches the supplied handoff. The OpenSpec handoff did not pin one source commit.
 The OpenSpec revision above identifies this review's snapshot, not a reconstructed revision of the earlier review.
 
+The current skill text is edited directly from the supplied local drafts. Original templates are preserved unchanged.
+The earlier broad rewrite remains in Git history. It is not the textual base of the current revision.
+
 ## Adaptation map
 
 | Local deliverable | Origin and changes |
@@ -19,7 +22,7 @@ The OpenSpec revision above identifies this review's snapshot, not a reconstruct
 | `lite-adaptation-review` | Original companion from the local OpenSpec review. Scope and uncertainty handling revised here. |
 | `lite-grill` | `grilling`, with domain-term clarification from the local draft. Bounded completion and neutral questions. |
 | `lite-feature-spec` | `to-spec`. No tracker setup, exhaustive story list, or compulsory new test-seam approval. |
-| `lite-to-tickets` | `to-tickets`. Added accessible spec references, verification, coverage, and graph checks. |
+| `lite-to-tickets` | `to-tickets`. Retained the original structure with accessible spec references, checks, coverage, and graph checks. |
 | `lite-run-tickets` | `implement-spec` and spec-review ideas from the local `code-review` adaptation. Added integration acceptance and safe cleanup. |
 | `lite-retro` | `retro`. Evidence scope and confidence made explicit. |
 | `lite-ask-person` | `to-questionnaire`. Reuses supplied context and avoids invented deadlines. |
