@@ -1,17 +1,26 @@
-# Frontier Skills Lite
+# Skills Lite
 
-Eight compact skills for Codex and Claude Code, adapted from OpenSpec and Matt Pocock's skills.
-They keep useful workflow rules and templates while cutting repeated guidance. Independent project; no model-performance claims.
+Compact versions of OpenSpec-inspired workflows and Matt Pocock's skills for the frontier coding models available in **November 2026**.
 
-## Sources
+## Why this exists
 
-Latest releases checked on **14 November 2026**:
+Instructions accumulate as we work around older models' limitations. Newer models may already handle those tasks, while the old guidance remains: repeated advice, rigid recipes, and conflicting rules that consume context or get in the way.
 
-- [Matt Pocock Skills 1.3.2](https://github.com/mattpocock/skills/releases/tag/v1.3.2). Our source snapshot is `5863806`, five commits after that tag, still versioned 1.3.2.
-- [OpenSpec 2.0.0](https://github.com/Fission-AI/OpenSpec/releases/tag/v2.0.0). Our review snapshot `d12c281` matches this release.
+[Addy Osmani recommends auditing agent files](https://addyosmani.com/blog/audit-your-agent-files/) as models improve.
+[Anthropic describes simplifying context for Claude 5 models](https://claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models/) to avoid unnecessary constraints.
 
-The skills were shortened from local adaptations of these projects. See [SOURCES.md](SOURCES.md) for exact revisions and attribution.
-The OpenSpec-inspired templates are plain Markdown, not OpenSpec CLI schemas.
+This project applies that idea to two skill collections: shorten general guidance, preserve useful workflow choices, and keep the original wording where it works.
+The initial review used Claude Fable 5.2; subsequent review and editing took place in Codex.
+The intended audience uses current frontier models, not models that need extensive procedural guidance.
+These are reviewed adaptations, not benchmark-proven replacements for the upstream collections.
+
+## Based on
+
+- [Matt Pocock Skills v1.3.2](https://github.com/mattpocock/skills/releases/tag/v1.3.2)
+- [OpenSpec v2.0.0](https://github.com/Fission-AI/OpenSpec/releases/tag/v2.0.0)
+
+Latest upstream releases checked on 14 November 2026. Exact source details are in [SOURCES.md](SOURCES.md).
+OpenSpec-inspired templates are plain Markdown, not CLI schemas.
 
 ## Skills
 
@@ -32,7 +41,7 @@ The OpenSpec-inspired templates are plain Markdown, not OpenSpec CLI schemas.
 
 Ask your agent:
 
-> Install the skills I select from https://github.com/zhiland/frontier-skills-lite into this project. Compare existing same-named skills before replacing them.
+> Install the skills I select from https://github.com/zhiland/skills-lite into this project. Compare existing same-named skills before replacing them.
 
 Or copy the selected directories from either collection's `skills/` folder:
 

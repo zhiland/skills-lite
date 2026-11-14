@@ -1,16 +1,20 @@
-# Three-stage history
+# Versions
 
-The repository starts with three explicit snapshots:
+| Tag | Version |
+| --- | --- |
+| [v0.1](https://github.com/zhiland/skills-lite/tree/v0.1) | Original local drafts supplied for review |
+| [v0.2](https://github.com/zhiland/skills-lite/tree/v0.2) | First rewrite and repository packaging |
+| [v0.3](https://github.com/zhiland/skills-lite/tree/v0.3) | Conservative revision preserving the original wording |
+| [v0.4](https://github.com/zhiland/skills-lite/tree/v0.4) | Skills Lite: automatic Codex discovery, no Python tooling or CI, shorter README, and documented rationale |
 
-1. [`original-drafts`](https://github.com/zhiland/frontier-skills-lite/tree/original-drafts) (`cc27d82`): the exact local drafts supplied for review, mapped to the later package paths. These were already local adaptations, not pristine upstream sources.
-2. [`first-rewrite`](https://github.com/zhiland/frontier-skills-lite/tree/first-rewrite) (`ad4c6de`): the first broad rewrite and complete repository packaging. Its tree matches the original first packaged commit exactly.
-3. [`conservative-revision`](https://github.com/zhiland/frontier-skills-lite/tree/conservative-revision): the final edit based on the original wording. Skill bodies and templates match the approved local final version; publication/history documentation is updated.
+The original drafts were already local adaptations of the upstream projects. Their text is preserved at the later package paths for easy comparison.
+Use v0.4 or the latest main branch for installation; v0.1 is a historical snapshot, not an installable package.
 
-## Compare versions
+## Compare
 
-- [Original drafts → first rewrite](https://github.com/zhiland/frontier-skills-lite/compare/original-drafts...first-rewrite)
-- [First rewrite → conservative revision](https://github.com/zhiland/frontier-skills-lite/compare/first-rewrite...conservative-revision)
-- [Original drafts → conservative revision](https://github.com/zhiland/frontier-skills-lite/compare/original-drafts...conservative-revision)
+- [v0.1 → v0.2](https://github.com/zhiland/skills-lite/compare/v0.1...v0.2)
+- [v0.2 → v0.3](https://github.com/zhiland/skills-lite/compare/v0.2...v0.3)
+- [v0.3 → v0.4](https://github.com/zhiland/skills-lite/compare/v0.3...v0.4)
+- [v0.1 → v0.4](https://github.com/zhiland/skills-lite/compare/v0.1...v0.4)
 
-The first snapshot intentionally preserves original names and plain rules, so it is not an installable release.
-Use the latest main branch. Source files outside this repository were not changed.
+The earlier descriptive tags remain as aliases: `original-drafts` = `v0.1`, `first-rewrite` = `v0.2`, and `conservative-revision` = `v0.3`.

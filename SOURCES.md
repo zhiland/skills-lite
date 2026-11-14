@@ -45,3 +45,13 @@ Private handoffs, transcript paths, and project history are intentionally exclud
 
 Client documentation consulted: [Claude Code skills](https://code.claude.com/docs/en/skills) and [Codex skills](https://developers.openai.com/codex/skills).
 Codex now uses default automatic invocation; the earlier manual-only policy files were removed. Client behavior still needs a live smoke test.
+
+## Motivation and review method
+
+- [Addy Osmani: Audit your Agent files](https://addyosmani.com/blog/audit-your-agent-files/) recommends revisiting accumulated instructions and testing whether removals help.
+- [Anthropic: The new rules of context engineering for Claude 5 generation models](https://claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models/) describes reducing constraints and retaining task-specific context.
+- [OpenAI: Rethinking skills and prompts for GPT-6 Astra](https://learn.chatgpt.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra) recommends auditing skills as model behavior changes. Its Astra observations are not automatically evidence about Sol, Terra, or Luna.
+
+The initial local review used Claude Fable 5.2, as reported by the author. Subsequent review and editing took place in Codex.
+A separate Astra review run and its model version are not established by the retained history. Consulting the Astra guidance is not an Astra benchmark.
+November 2026 describes the target model generation, not a guarantee that every instruction is redundant for every current model.
