@@ -9,10 +9,13 @@ Instructions accumulate as we work around older models' limitations. Newer model
 [Addy Osmani recommends auditing agent files](https://addyosmani.com/blog/audit-your-agent-files/) as models improve.
 [Anthropic describes simplifying context for Claude 5 models](https://claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models/) to avoid unnecessary constraints.
 
-This project applies that idea to two skill collections: shorten general guidance, preserve useful workflow choices, and keep the original wording where it works.
-The initial review used Claude Fable 5.2; subsequent review and editing used GPT-6 Astra in Codex.
-The intended audience uses current frontier models, not models that need extensive procedural guidance.
-These are reviewed adaptations, not benchmark-proven replacements for the upstream collections.
+This project applies that idea to two skill collections:
+
+- **Approach:** shorten general guidance, preserve useful workflow choices, and keep the original wording where it works.
+- **Initial review:** Claude Fable 5.2.
+- **Subsequent review and editing:** GPT-6 Astra in Codex.
+- **Intended audience:** users of current frontier models, rather than models that need extensive procedural guidance.
+- **Evidence:** reviewed adaptations, not benchmark-proven replacements for the upstream collections.
 
 ## Based on
 
