@@ -1,6 +1,6 @@
 # Skills Lite
 
-Compact versions of OpenSpec-inspired workflows and Matt Pocock's skills for the frontier coding models available in **November 2026**.
+Compact versions of [OpenSpec v2.0.0](https://github.com/Fission-AI/OpenSpec/releases/tag/v2.0.0)-inspired workflows and [Matt Pocock's skills v1.3.2](https://github.com/mattpocock/skills/releases/tag/v1.3.2) for the frontier coding models available in **November 2026**.
 
 ## Why this exists
 
@@ -14,14 +14,7 @@ This project applies that idea to two skill collections:
 - **Approach:** reviewed and edited with Claude Fable 5.2 and GPT-6 Astra to shorten general guidance, preserve useful workflow choices, and keep the original wording where it works.
 - **Intended audience:** users of current frontier models, rather than models that need extensive procedural guidance.
 - **Evidence:** reviewed adaptations, not benchmark-proven replacements for the upstream collections.
-
-## Based on
-
-- [Matt Pocock Skills v1.3.2](https://github.com/mattpocock/skills/releases/tag/v1.3.2)
-- [OpenSpec v2.0.0](https://github.com/Fission-AI/OpenSpec/releases/tag/v2.0.0)
-
-Latest upstream releases checked on 14 November 2026. Exact source details are in [SOURCES.md](SOURCES.md).
-OpenSpec-inspired templates are plain Markdown, not CLI schemas.
+- **Sources:** exact source details are in [SOURCES.md](SOURCES.md).
 
 ## Skills
 
