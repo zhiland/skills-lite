@@ -59,9 +59,10 @@ When updating, replace renamed skill folders rather than keeping both names. See
 
 ## Use
 
-Start with `lite-grilling` → `lite-to-spec`.
-Add tickets and implementation when needed; do not create duplicate plans.
-[Optional project rules](matt-pocock-skills/OPTIONAL-RULES.md) are separate from installation.
+Research options and record the choice in a study → `lite-grilling` → `lite-to-spec` → implement and review.
+For larger features, use `lite-to-tickets` → `lite-implement-spec` after the spec.
+
+[Optional project rules](matt-pocock-skills/OPTIONAL-RULES.md) can be adopted separately.
 
 [History and diffs](docs/HISTORY.md) · [Review](docs/REVIEW.md) · [Evaluation guide](docs/EVALUATION.md)
 
