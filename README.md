@@ -60,7 +60,7 @@ When updating, replace renamed skill folders rather than keeping both names. See
 ## Use
 
 Research options and record the choice in a study → `lite-grilling` → `lite-to-spec` → implement and review.
-For larger features, use `lite-to-tickets` → `lite-implement-spec` after the spec.
+For larger features: research and study → `lite-grilling` → `lite-to-spec` → `lite-to-tickets` → `lite-implement-spec` → PR review and merge.
 
 [Optional project rules](matt-pocock-skills/OPTIONAL-RULES.md) can be adopted separately.
 
