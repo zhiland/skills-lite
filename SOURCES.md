@@ -1,5 +1,7 @@
 # Sources and provenance
 
+v0.5 ships six Matt Pocock adaptations. The OpenSpec-related skills were removed; their provenance below is historical, not a compatibility claim.
+
 Source review: 2026-11-13. Conservative revision: 2026-11-14. Local drafts were the input to this review. Upstream files were consulted to check attribution and omitted behavior.
 This was not a new exhaustive audit of every upstream skill.
 
@@ -11,7 +13,7 @@ This was not a new exhaustive audit of every upstream skill.
 The Matt Pocock revision matches the supplied handoff. The OpenSpec handoff did not pin one source commit.
 The OpenSpec revision above identifies this review's snapshot, not a reconstructed revision of the earlier review.
 
-The current skill text is edited directly from the supplied local drafts. Original templates are preserved unchanged.
+The current skill text is edited directly from the supplied local drafts. The removed OpenSpec-inspired templates remain available in earlier Git history.
 The earlier broad rewrite remains in Git history. It is not the textual base of the current revision.
 
 ## Release versions
@@ -30,8 +32,8 @@ The original OpenSpec handoff also consulted CLI 1.16.1; its unpinned earlier ma
 
 | Local deliverable | Origin and changes |
 | --- | --- |
-| `lite-feature-plan` and templates | OpenSpec-inspired local rules/templates, repackaged as an optional skill. No CLI or delta-format compatibility. |
-| `lite-adaptation-review` | Original companion from the local OpenSpec review. Scope and uncertainty handling revised here. |
+| Removed in v0.5: `lite-feature-plan` and templates | OpenSpec-inspired local rules/templates, repackaged as an optional skill. No CLI or delta-format compatibility. |
+| Removed in v0.5: `lite-adaptation-review` | Original companion from the local OpenSpec review. Scope and uncertainty handling revised here. |
 | `lite-grilling` | `grilling`, with domain-term clarification from the local draft. Bounded completion and neutral questions. |
 | `lite-to-spec` | `to-spec`. No tracker setup, exhaustive story list, or compulsory new test-seam approval. |
 | `lite-to-tickets` | `to-tickets`. Retained the original structure with accessible spec references, checks, coverage, and graph checks. |

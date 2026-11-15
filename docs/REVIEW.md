@@ -1,6 +1,8 @@
 # Review and conservative revision
 
-Source review: 2026-11-13. Current revision: 2026-11-14.
+**v0.5 update (2026-11-15):** only the six Matt Pocock adaptations remain. `lite-feature-plan`, its templates, and `lite-adaptation-review` were removed because they did not preserve the upstream OpenSpec workflows. The review and size figures below describe the earlier eight-skill package, not v0.5. Compatible OpenSpec adaptations are planned.
+
+Source review: 2026-11-13. Historical conservative revision: 2026-11-14.
 
 ## Editorial decision
 

@@ -12,7 +12,7 @@ Suggested tasks:
 2. Slice a feature with shared interfaces. Check coverage, dependency validity, and independently verifiable outcomes.
 3. Implement two tickets whose changes interact. Check the combined integration commit, not only worker reports.
 4. Repeat with an unavailable check and a dirty worker checkout. Check honest status and preservation of work.
-5. Review a tool without usage history. Check that uncertainty is preserved and unrelated data is not read.
+5. Review a session with limited evidence. Check that the retrospective preserves uncertainty and stays within the selected project.
 6. Draft a questionnaire with all intake facts supplied. Check that it avoids repeat questions and invented deadlines.
 
 Record model and client versions, skill commit, input artifacts, final diff, passed checks, human interventions,

@@ -1,9 +1,9 @@
 # Publication notes
 
 Project: [zhiland/skills-lite](https://github.com/zhiland/skills-lite).
-The default branch is `main`. Versions v0.1 through v0.4 are described in [HISTORY.md](HISTORY.md).
+The default branch is `main`. Versions v0.1 through v0.5 are described in [HISTORY.md](HISTORY.md).
 
-The repository includes skill files, templates, a README, MIT notices, source mapping, and revision history.
+The repository includes six Matt Pocock skill packages, a README, MIT notices, source mapping, and revision history.
 Install by copying selected skill directories. No installer, Python dependency, or CI workflow is required.
 
 ## Publish your own copy

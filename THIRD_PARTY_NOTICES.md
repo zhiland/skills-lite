@@ -1,8 +1,8 @@
 # Third-party notices
 
-This repository contains adaptations of MIT-licensed material:
+The current skills adapt MIT-licensed Matt Pocock material. OpenSpec notices are retained for the historical adaptations documented in this repository:
 
-- OpenSpec: Copyright (c) 2024 OpenSpec Contributors. [Full notice](licenses/openspec-MIT.txt).
+- OpenSpec (historical material, removed from the skill collection in v0.5): Copyright (c) 2024 OpenSpec Contributors. [Full notice](licenses/openspec-MIT.txt).
 - Matt Pocock skills: Copyright (c) 2026 Matt Pocock. [Full notice](licenses/matt-pocock-MIT.txt).
 
 Keep these notices when redistributing adaptations. The repository's MIT license covers new contributions and does not replace upstream notices.
