@@ -1,6 +1,6 @@
 # Review and conservative revision
 
-**v0.5 update (2026-11-15):** only the six Matt Pocock adaptations remain. `lite-feature-plan`, its templates, and `lite-adaptation-review` were removed because they did not preserve the upstream OpenSpec workflows. The review and size figures below describe the earlier eight-skill package, not v0.5. Compatible OpenSpec adaptations are planned.
+**Current scope:** six Matt Pocock adaptations. This review describes their conservative revision and optional project rules.
 
 Source review: 2026-11-13. Historical conservative revision: 2026-11-14.
 
@@ -8,7 +8,6 @@ Source review: 2026-11-13. Historical conservative revision: 2026-11-14.
 
 The first packaged version rewrote too much of the supplied drafts. This revision starts again from those drafts.
 It preserves headings, steps, templates, and wording wherever a concrete correction does not require an edit.
-The three OpenSpec-inspired templates are unchanged from the local originals.
 Names keep the `lite-` prefix for installation, Claude retains manual invocation, and Codex uses automatic selection by default.
 
 ## Targeted changes
@@ -21,18 +20,7 @@ Names keep the `lite-` prefix for installation, Claude retains manual invocation
 | `run-tickets` | Preserve the eight steps. Check integrated dependencies, use sequential fallback, verify the integration tip, preserve dirty worktrees, and limit unnecessary testing. |
 | `retro` | Keep the original categories. Shorten one example list. Require evidence before proposing removal of instructions. |
 | `ask-person` | Keep the original questionnaire structure. Ask only missing intake questions, avoid invented deadlines, and keep delivery separate. |
-| `adaptation-review` | Keep the original headings and verdicts. Shorten repeated prose. Limit private-history access to the selected project and qualify claims about tokens and model ability. |
-| OpenSpec rules | Keep all 13 numbered rules. Correct template links, preserve prior approval, allow drafting around unresolved decisions, and replace automatic deletion with project retention policy. |
 | Optional coding rules | Keep the six bullets. Make TDD conditional, permit hypotheses without a deterministic reproduction, and retain useful prototype safeguards. |
-
-If planning uses separate tickets, they own ticket status. `tasks.md` becomes their index and the cross-cutting checklist.
-This prevents competing records of the same work.
-
-## Size comparison
-
-Across the seven original skill bodies, the OpenSpec rules, and optional coding rules, text decreased from 2,130 to 1,915 whitespace-delimited words (about 10%).
-This excludes frontmatter and unchanged templates. It is not a token measurement.
-The runner grew by 21 words and OpenSpec rules by seven words to retain concrete integration and status safeguards.
 
 ## Models and scope
 
@@ -51,6 +39,5 @@ The local drafts remain untouched. Earlier revisions passed metadata/link checks
 The installer, Python validator, development dependency, tests, and CI workflow were subsequently removed to keep this a Markdown-only collection.
 Those earlier test results describe the historical tooling, not a current automated validation service.
 
-Manual contract review covers unresolved decisions, invalid ticket dependencies, concurrent results, unavailable checks, dirty worker checkouts,
-and adoption reviews without usage evidence. This is text inspection, not independent behavioral testing.
+Manual contract review covers unresolved decisions, invalid ticket dependencies, concurrent results, unavailable checks, dirty worker checkouts. This is text inspection, not independent behavioral testing.
 Live discovery, actual prompt tokens, and implementation quality across models remain untested. See [EVALUATION.md](EVALUATION.md).

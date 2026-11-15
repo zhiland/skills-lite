@@ -6,7 +6,7 @@
 | [v0.2](https://github.com/zhiland/skills-lite/tree/v0.2) | First rewrite and repository packaging |
 | [v0.3](https://github.com/zhiland/skills-lite/tree/v0.3) | Conservative revision preserving the original wording |
 | [v0.4](https://github.com/zhiland/skills-lite/tree/v0.4) | Skills Lite: automatic Codex discovery, no Python tooling or CI, shorter README, and documented rationale |
-| [v0.5](https://github.com/zhiland/skills-lite/tree/v0.5) | Matt Pocock skills only; remove the two independent OpenSpec-related skills pending compatible upstream adaptations |
+| [v0.5](https://github.com/zhiland/skills-lite/tree/v0.5) | Matt Pocock skills only; remove `lite-feature-plan` and `lite-adaptation-review` |
 
 The original drafts were already local adaptations of the upstream projects. Their text is preserved at the later package paths for easy comparison.
 Use v0.5 or the latest main branch for installation; v0.1 is a historical snapshot, not an installable package.
@@ -36,4 +36,4 @@ Matt Pocock adaptations now use `lite-` followed by the upstream skill name. The
 | `lite-retro` | unchanged | `retro` |
 
 Replace the old installation folder when adopting a renamed skill. Preserve any local customizations before replacement.
-v0.5 removes `lite-feature-plan` and `lite-adaptation-review`. They were independent local workflows, not shortened upstream OpenSpec skills. Remove installed copies when upgrading, preserving any local customizations. Earlier tags retain the historical files. Compatible OpenSpec adaptations are planned separately.
+v0.5 removes `lite-feature-plan` and `lite-adaptation-review`. They were independent local workflows. Remove installed copies when upgrading, preserving any local customizations. Earlier tags retain the historical files.

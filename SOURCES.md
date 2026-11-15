@@ -1,19 +1,17 @@
 # Sources and provenance
 
-v0.5 ships six Matt Pocock adaptations. The OpenSpec-related skills were removed; their provenance below is historical, not a compatibility claim.
+This collection ships six Matt Pocock adaptations.
 
 Source review: 2026-11-13. Conservative revision: 2026-11-14. Local drafts were the input to this review. Upstream files were consulted to check attribution and omitted behavior.
 This was not a new exhaustive audit of every upstream skill.
 
 | Source | Pinned revision | Material used |
 | --- | --- | --- |
-| [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec/tree/d12c2817776779e06891d68230773b3bb673b106) | `d12c2817776779e06891d68230773b3bb673b106` | `schemas/spec-driven/schema.yaml`, its templates, and the planning guidance in `src/core/templates/workflows/explore.ts` |
 | [mattpocock/skills](https://github.com/mattpocock/skills/tree/5863806dd4e15c63174bee4e7515a4256792ecfa) | `5863806dd4e15c63174bee4e7515a4256792ecfa` | `skills/productivity/grilling`, `to-questionnaire`, and `skills/engineering/to-spec`, `to-tickets`, `implement-spec`, `retro` |
 
-The Matt Pocock revision matches the supplied handoff. The OpenSpec handoff did not pin one source commit.
-The OpenSpec revision above identifies this review's snapshot, not a reconstructed revision of the earlier review.
+The Matt Pocock revision matches the supplied handoff.
 
-The current skill text is edited directly from the supplied local drafts. The removed OpenSpec-inspired templates remain available in earlier Git history.
+The current skill text is edited directly from the supplied local drafts.
 The earlier broad rewrite remains in Git history. It is not the textual base of the current revision.
 
 ## Release versions
@@ -23,17 +21,13 @@ Verified against GitHub releases and source manifests on 2026-11-14:
 | Project | Latest release | Relationship to our pinned source |
 | --- | --- | --- |
 | Matt Pocock Skills | [v1.3.2](https://github.com/mattpocock/skills/releases/tag/v1.3.2), published 2026-10-29 | `5863806` is five commits after the tag; `.claude-plugin/plugin.json` still declares 1.3.2. Those changes include `implement-spec`. |
-| OpenSpec | [v2.0.0](https://github.com/Fission-AI/OpenSpec/releases/tag/v2.0.0), published 2026-11-11 | `d12c281` is the release commit; `package.json` declares 2.0.0. |
 
 These are source versions, not a version or compatibility guarantee for this independent collection.
-The original OpenSpec handoff also consulted CLI 1.16.1; its unpinned earlier materials are not retroactively relabeled as 2.0.0.
 
 ## Adaptation map
 
 | Local deliverable | Origin and changes |
 | --- | --- |
-| Removed in v0.5: `lite-feature-plan` and templates | OpenSpec-inspired local rules/templates, repackaged as an optional skill. No CLI or delta-format compatibility. |
-| Removed in v0.5: `lite-adaptation-review` | Original companion from the local OpenSpec review. Scope and uncertainty handling revised here. |
 | `lite-grilling` | `grilling`, with domain-term clarification from the local draft. Bounded completion and neutral questions. |
 | `lite-to-spec` | `to-spec`. No tracker setup, exhaustive story list, or compulsory new test-seam approval. |
 | `lite-to-tickets` | `to-tickets`. Retained the original structure with accessible spec references, checks, coverage, and graph checks. |

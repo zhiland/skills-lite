@@ -2,8 +2,6 @@
 
 Compact versions of [Matt Pocock's skills v1.3.2](https://github.com/mattpocock/skills/releases/tag/v1.3.2) for the frontier coding models available in **November 2026**.
 
-OpenSpec adaptations are coming next. They will shorten the original workflows while preserving the CLI and specification format. **v0.5 contains only Matt Pocock adaptations.**
-
 ## Why this exists
 
 Instructions accumulate as we work around older models' limitations. Newer models may already handle those tasks, while the old guidance remains: repeated advice, rigid recipes, and conflicting rules that consume context or get in the way.
@@ -42,7 +40,6 @@ Names follow the upstream skill name with a `lite-` prefix. Additional source de
 | Matt Pocock: `tdd`, `code-review`, `diagnosing-bugs`, architecture guidance | Omit standalone tutorials on familiar engineering methods. Retain selected rules and verification within the workflows. |
 
 These are scope choices informed by text review, not proof that the omitted skills are obsolete.
-For OpenSpec, use the [upstream project](https://github.com/Fission-AI/OpenSpec) until the compatible adaptations are ready.
 
 ## Install
 
@@ -59,7 +56,7 @@ Copy the whole skill directory, including its license and any supporting files. 
 Codex can select skills automatically or via `$skill-name`. Claude Code uses explicit `/skill-name` invocation.
 When updating, replace renamed skill folders rather than keeping both names. See the [rename map](docs/HISTORY.md#skill-names-on-main). Remove obsolete `agents/openai.yaml` files to enable automatic selection in Codex.
 
-**Upgrading from v0.4 or earlier:** remove installed `lite-feature-plan` and `lite-adaptation-review` skill folders, preserving any local customizations. They were removed because they did not provide shortened upstream OpenSpec workflows. Updating this repository does not remove installed copies.
+**Upgrading from v0.4 or earlier:** remove installed `lite-feature-plan` and `lite-adaptation-review` skill folders, preserving any local customizations. They are no longer part of this collection. Updating this repository does not remove installed copies.
 
 ## Use
 
