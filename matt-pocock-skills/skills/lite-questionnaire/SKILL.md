@@ -1,5 +1,5 @@
 ---
-name: lite-ask-person
+name: lite-questionnaire
 description: Write a questionnaire for a person who holds knowledge a decision needs.
 disable-model-invocation: true
 argument-hint: "Who it is for and about what"

@@ -18,18 +18,19 @@ This project applies that idea to two skill collections:
 
 ## Skills
 
-| Folder | Skill | Purpose |
-| --- | --- | --- |
-| `openspec` | `lite-feature-plan` | Proposal, behavior spec, and tasks |
-| `openspec` | `lite-adaptation-review` | Evaluate a skill or tool for your project¹ |
-| `matt-pocock-skills` | `lite-grill` | Resolve blocking decisions |
-| `matt-pocock-skills` | `lite-feature-spec` | Turn settled decisions into a spec |
-| `matt-pocock-skills` | `lite-to-tickets` | Split a spec into verifiable tickets |
-| `matt-pocock-skills` | `lite-run-tickets` | Implement, integrate, and verify tickets |
-| `matt-pocock-skills` | `lite-retro` | Review the agent's working environment |
-| `matt-pocock-skills` | `lite-ask-person` | Draft a questionnaire |
+| Folder | Skill | Original name / source | Purpose |
+| --- | --- | --- | --- |
+| `openspec` | `lite-feature-plan` | `spec-driven` schema + planning guidance from `explore` | Proposal, behavior spec, and tasks |
+| `openspec` | `lite-adaptation-review` | Original companion skill¹ | Evaluate a skill or tool for your project |
+| `matt-pocock-skills` | `lite-grill` | `grilling` | Resolve blocking decisions |
+| `matt-pocock-skills` | `lite-feature-spec` | `to-spec` | Turn settled decisions into a spec |
+| `matt-pocock-skills` | `lite-to-tickets` | `to-tickets` | Split a spec into verifiable tickets |
+| `matt-pocock-skills` | `lite-run-tickets` | `implement-spec` + spec checks from `code-review` | Implement, integrate, and verify tickets |
+| `matt-pocock-skills` | `lite-retro` | `retro` | Review the agent's working environment |
+| `matt-pocock-skills` | `lite-questionnaire` | `to-questionnaire` | Draft questions for someone whose knowledge you need |
 
-¹ An original companion skill, not an upstream OpenSpec skill.
+¹ Created during the local review, not an upstream OpenSpec skill.
+`lite-questionnaire` was previously named `lite-ask-person`. It adapts `to-questionnaire`, not `ask-matt`.
 
 ## What we kept and left out
 

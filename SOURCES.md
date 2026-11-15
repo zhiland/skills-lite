@@ -37,7 +37,7 @@ The original OpenSpec handoff also consulted CLI 1.16.1; its unpinned earlier ma
 | `lite-to-tickets` | `to-tickets`. Retained the original structure with accessible spec references, checks, coverage, and graph checks. |
 | `lite-run-tickets` | `implement-spec` and spec-review ideas from the local `code-review` adaptation. Added integration acceptance and safe cleanup. |
 | `lite-retro` | `retro`. Evidence scope and confidence made explicit. |
-| `lite-ask-person` | `to-questionnaire`. Reuses supplied context and avoids invented deadlines. |
+| `lite-questionnaire` (formerly `lite-ask-person`) | `to-questionnaire`. Reuses supplied context and avoids invented deadlines. |
 | Optional rules | Local distillation of `tdd`, `diagnosing-bugs`, `prototype`, and `domain-modeling`. Unsafe universal constraints removed. |
 
 Earlier handoffs contained model-specific obsolescence judgments and size estimates. They were not benchmarks and are not adopted as findings here.
