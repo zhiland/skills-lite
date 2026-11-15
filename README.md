@@ -40,8 +40,6 @@ Names follow the upstream skill name with a `lite-` prefix. Additional source de
 | Matt Pocock: `research` | Omit a separate lite version: the upstream skill is already short. Its workflow—delegate research to a background agent, use primary sources, and save a cited Markdown report—can be requested directly. Use the original skill if you want that workflow as a reusable command. |
 | Matt Pocock: `tdd`, `code-review`, `diagnosing-bugs`, architecture guidance | Omit standalone tutorials on familiar engineering methods. Retain selected rules and verification within the workflows. |
 
-These are scope choices informed by text review, not proof that the omitted skills are obsolete.
-
 ## Install
 
 Ask your agent:
