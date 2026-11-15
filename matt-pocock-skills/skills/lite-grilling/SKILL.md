@@ -1,5 +1,5 @@
 ---
-name: lite-grill
+name: lite-grilling
 description: Interview before a feature or decision - rounds of questions until blocking decisions are settled.
 disable-model-invocation: true
 argument-hint: "What are we discussing?"

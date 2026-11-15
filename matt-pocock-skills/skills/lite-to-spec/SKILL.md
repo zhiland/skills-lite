@@ -1,5 +1,5 @@
 ---
-name: lite-feature-spec
+name: lite-to-spec
 description: Write a feature spec from what this conversation has already settled, with no new interview.
 disable-model-invocation: true
 argument-hint: "Where to save it (path or ticket)"

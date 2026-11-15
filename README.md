@@ -22,15 +22,15 @@ This project applies that idea to two skill collections:
 | --- | --- | --- | --- |
 | `openspec` | `lite-feature-plan` | `spec-driven` schema + planning guidance from `explore` | Proposal, behavior spec, and tasks |
 | `openspec` | `lite-adaptation-review` | Original companion skill¹ | Evaluate a skill or tool for your project |
-| `matt-pocock-skills` | `lite-grill` | `grilling` | Resolve blocking decisions |
-| `matt-pocock-skills` | `lite-feature-spec` | `to-spec` | Turn settled decisions into a spec |
+| `matt-pocock-skills` | `lite-grilling` | `grilling` | Resolve blocking decisions |
+| `matt-pocock-skills` | `lite-to-spec` | `to-spec` | Turn settled decisions into a spec |
 | `matt-pocock-skills` | `lite-to-tickets` | `to-tickets` | Split a spec into verifiable tickets |
-| `matt-pocock-skills` | `lite-run-tickets` | `implement-spec` + spec checks from `code-review` | Implement, integrate, and verify tickets |
+| `matt-pocock-skills` | `lite-implement-spec` | `implement-spec` + spec checks from `code-review` | Implement, integrate, and verify tickets |
 | `matt-pocock-skills` | `lite-retro` | `retro` | Review the agent's working environment |
-| `matt-pocock-skills` | `lite-questionnaire` | `to-questionnaire` | Draft questions for someone whose knowledge you need |
+| `matt-pocock-skills` | `lite-to-questionnaire` | `to-questionnaire` | Draft questions for someone whose knowledge you need |
 
 ¹ Created during the local review, not an upstream OpenSpec skill.
-`lite-questionnaire` was previously named `lite-ask-person`. It adapts `to-questionnaire`, not `ask-matt`.
+Matt Pocock adaptations use the upstream name with a `lite-` prefix. The OpenSpec-inspired plan combines several sources, so it keeps its descriptive name.
 
 ## What we kept and left out
 
@@ -60,11 +60,11 @@ Or copy the selected directories from either collection's `skills/` folder:
 
 Copy the whole skill directory, including templates and license. No Python, installer, or CLI dependency.
 Codex can select skills automatically or via `$skill-name`. Claude Code uses explicit `/skill-name` invocation.
-When replacing an older copy, remove its obsolete `agents/openai.yaml` to enable automatic selection in Codex.
+When updating, replace renamed skill folders rather than keeping both names. See the [rename map](docs/HISTORY.md#skill-names-on-main). Remove obsolete `agents/openai.yaml` files to enable automatic selection in Codex.
 
 ## Use
 
-Choose `lite-feature-plan`, or start with `lite-grill` → `lite-feature-spec`.
+Choose `lite-feature-plan`, or start with `lite-grilling` → `lite-to-spec`.
 Add tickets and implementation when needed; do not create duplicate plans.
 [Optional project rules](matt-pocock-skills/OPTIONAL-RULES.md) are separate from installation.
 

@@ -1,5 +1,5 @@
 ---
-name: lite-run-tickets
+name: lite-implement-spec
 description: Implement a set of tickets with parallel subagents on one integration branch.
 disable-model-invocation: true
 argument-hint: "The spec and its tickets"

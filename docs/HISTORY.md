@@ -18,3 +18,19 @@ Use v0.4 or the latest main branch for installation; v0.1 is a historical snapsh
 - [v0.1 → v0.4](https://github.com/zhiland/skills-lite/compare/v0.1...v0.4)
 
 The earlier descriptive tags remain as aliases: `original-drafts` = `v0.1`, `first-rewrite` = `v0.2`, and `conservative-revision` = `v0.3`.
+
+## Skill names on main
+
+Matt Pocock adaptations now use `lite-` followed by the upstream skill name. The v0.4 tag retains its original names.
+
+| Earlier package name | Current name | Upstream name |
+| --- | --- | --- |
+| `lite-grill` | `lite-grilling` | `grilling` |
+| `lite-feature-spec` | `lite-to-spec` | `to-spec` |
+| `lite-run-tickets` | `lite-implement-spec` | `implement-spec` |
+| `lite-ask-person`, then `lite-questionnaire` | `lite-to-questionnaire` | `to-questionnaire` |
+| `lite-to-tickets` | unchanged | `to-tickets` |
+| `lite-retro` | unchanged | `retro` |
+
+Replace the old installation folder when adopting a renamed skill. Preserve any local customizations before replacement.
+The two OpenSpec-folder skills have no one-to-one upstream skill name and remain `lite-feature-plan` and `lite-adaptation-review`.
